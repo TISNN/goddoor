@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ImageGenerator } from '@/components/ImageGenerator'
+import Image from 'next/image'
 
 const teamMembers = [
   {
@@ -106,6 +107,64 @@ export default function About() {
                 <p className="text-primary/60 text-sm">{member.description}</p>
               </motion.div>
             ))}
+          </div>
+        </section>
+
+        {/* 策展人介绍 */}
+        <section className="mb-20">
+          <h2 className="section-title text-center">策展人介绍</h2>
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="card p-8"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div className="md:col-span-1">
+                  <div className="w-48 h-48 mx-auto rounded-full overflow-hidden">
+                    <Image
+                      src="/images/team/mai.png"
+                      alt="张沈子墨 - 首席策展人"
+                      width={192}
+                      height={192}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                </div>
+                <div className="md:col-span-2">
+                  <h3 className="text-2xl font-song mb-2">张沈子墨</h3>
+                  <p className="text-accent mb-4">首席策展人</p>
+                  <div className="space-y-4 text-primary/80">
+                    <p>
+                      南京财经大学 市场营销专业
+                    </p>
+                    <p>
+                      曾在奥美北京和VSPO电竞担任客户执行，积累了丰富的项目管理和创意策划经验。
+                      对传统文化和数字艺术有着深入的研究和独特的见解。
+                    </p>
+                    <p>
+                      此次展览融合了传统门神画艺术与现代数字技术，旨在通过创新的展示方式，
+                      让更多人了解和感受中国传统文化的魅力。
+                    </p>
+                  </div>
+                  <div className="mt-6 flex flex-wrap gap-4">
+                    <div className="bg-secondary rounded-full px-4 py-2 text-sm">
+                      传统文化研究
+                    </div>
+                    <div className="bg-secondary rounded-full px-4 py-2 text-sm">
+                      数字艺术策展
+                    </div>
+                    <div className="bg-secondary rounded-full px-4 py-2 text-sm">
+                      创意策划
+                    </div>
+                    <div className="bg-secondary rounded-full px-4 py-2 text-sm">
+                      项目管理
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
