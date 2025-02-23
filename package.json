@@ -1,0 +1,35 @@
+{
+  "name": "chinese-door-god-exhibition",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "13.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "framer-motion": "^11.0.3",
+    "three": "^0.161.0",
+    "@react-three/fiber": "^8.15.16",
+    "@react-three/drei": "^9.97.5",
+    "@tensorflow/tfjs": "^4.17.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "typescript": "^5.3.3",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "13.4.19",
+    "prettier": "^3.2.5"
+  }
+} 
