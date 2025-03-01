@@ -52,8 +52,8 @@ export default function RootLayout({
               <div>
                 <h3 className="text-xl font-song mb-4">联系方式</h3>
                 <p className="text-gray-300">
-                  邮箱：contact@doorgod-museum.cn<br />
-                  电话：+86 123 4567 8900
+                  邮箱：MaisieCheunggg@outlook.com<br />
+                  电话：+86 13584609880
                 </p>
               </div>
               <div>

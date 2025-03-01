@@ -15,7 +15,7 @@ const artworks = [
     title: '绿云巨幅门神',
     period: '清代 · 中国美术馆藏',
     description: '这幅门神画作品展现了传统门神的典型特征，用色大胆，线条流畅，体现了清代门神画的艺术特色。',
-    image: '/images/history/ming-qing.jpg',
+    image: '/images/gallery/lvyun.jpg',
     position: [0, 3, -9.5],
     rotation: [0, 0, 0]
   },
@@ -24,7 +24,7 @@ const artworks = [
     title: '钟馗门神',
     period: '明代 · 纸本设色',
     description: '钟馗形象威严庄重，画面构图严谨，笔法精湛，是明代门神画的代表作品。',
-    image: '/images/history/tang.jpg',
+    image: '/images/gallery/zhongkuimenshen.jpg',
     position: [9.5, 3, 0],
     rotation: [0, -Math.PI / 2, 0]
   },
@@ -33,16 +33,16 @@ const artworks = [
     title: '武门神：神荼郁垒',
     period: '清代 · 国家图书馆藏',
     description: '神荼与郁垒是最早的门神形象，这幅作品完整保留了传统门神的典型特征。',
-    image: '/images/history/han.jpg',
+    image: '/images/gallery/wumenshen.jpg',
     position: [-9.5, 3, 0],
     rotation: [0, Math.PI / 2, 0]
   },
   {
     id: 4,
-    title: '木刻年画《军民合作》',
-    period: '1944年 · 严涵',
-    description: '这幅作品融合了传统门神画风格与现代革命题材，具有独特的时代特色。',
-    image: '/images/history/modern.jpg',
+    title: '山东杨家埠门神',
+    period: '清代 · 民间艺术',
+    description: '杨家埠木版年画以浓艳的色彩和生动的民间风格著称，体现了北方民间艺术的特色。',
+    image: '/images/gallery/yangjia.jpg',
     position: [0, 3, 9.5],
     rotation: [0, Math.PI, 0]
   }

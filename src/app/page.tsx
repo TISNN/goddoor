@@ -78,6 +78,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 展览前言 Section */}
+      <section className="py-16 bg-white">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-song mb-8 text-primary">展览前言</h2>
+            <div className="prose prose-lg mx-auto">
+              <p className="text-lg mb-4">
+              中国传统门神画不仅是民间艺术的象征，也是中国绘画历史中的重要组成部分。其艺术特征融入了丰富的象征主义、民间信仰及装饰性艺术元素，表现出浓厚的文化符号学价值。门神画的形式与色彩，尤其是在构图和视觉冲击力上，长期以来都受到学者和艺术家的高度评价。在数字修复的背景下，运用AI技术进行门神画的修复，不仅是对其视觉层面的复原，更是对其文化内涵与艺术价值的再造。通过深度学习和图像识别，AI能够精确分析画作的细节，重建破损部分，确保艺术风格与历史背景的精确再现。这种结合“形式主义”与“符号学”理论的修复方式，为传统艺术带来了新的生机，推动了数字时代艺术创作的跨界融合。此外，AI技术为门神画带来了更加现代化的诠释方式，为传统艺术的当代传承和文化遗产保护提供了创新的路径。
+              </p>
+
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 bg-secondary">
         <div className="container">

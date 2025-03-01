@@ -2,45 +2,27 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ImageGenerator } from '@/components/ImageGenerator'
+import Image from 'next/image'
 import { Modal } from '@/components/Modal'
 
 const restorationExamples = [
   {
     title: '南阳汉画像石双首朱雀',
     description: '通过AI技术修复色彩和纹理，重现汉代艺术特色。',
-    beforeImage: {
-      bgColor: '#D3D3D3', // 灰色,表示受损
-      text: '修复前'
-    },
-    afterImage: {
-      bgColor: '#FFE4C4', // 暖色调,表示修复后
-      text: '修复后'
-    }
+    beforeImage: '/images/restoration/zhuque.jpg',
+    afterImage: '/images/restoration/zhuque_after.jpg'
   },
   {
     title: '武门神：神荼郁垒',
     description: '修复纸面破损和褪色问题，恢复清代原貌。',
-    beforeImage: {
-      bgColor: '#E6E6FA', // 淡紫色,表示褪色
-      text: '修复前'
-    },
-    afterImage: {
-      bgColor: '#DDA0DD', // 深紫色,表示修复后
-      text: '修复后'
-    }
+    beforeImage: '/images/restoration/shencha.jpg',
+    afterImage: '/images/restoration/shencha_after.jpg'
   },
   {
     title: '木刻年画《军民合作 抗战胜利》',
     description: '修复印刷错误和破损，保留历史印记。',
-    beforeImage: {
-      bgColor: '#F0E68C', // 米黄色,表示老旧
-      text: '修复前'
-    },
-    afterImage: {
-      bgColor: '#DAA520', // 金色,表示修复后
-      text: '修复后'
-    }
+    beforeImage: '/images/restoration/junming.jpg',
+    afterImage: '/images/restoration/junming_after.jpg'
   }
 ]
 
@@ -123,21 +105,27 @@ export default function Restoration() {
                   <p className="text-primary/80">{example.description}</p>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="card p-4">
-                      <ImageGenerator
-                        width={300}
-                        height={400}
-                        text={example.beforeImage.text}
-                        bgColor={example.beforeImage.bgColor}
-                      />
+                      <div className="relative w-full h-[400px]">
+                        <Image
+                          src={example.beforeImage}
+                          alt={`${example.title} 修复前`}
+                          width={300}
+                          height={400}
+                          className="object-contain w-full h-full"
+                        />
+                      </div>
                       <p className="text-center mt-2 text-sm text-primary/60">修复前</p>
                     </div>
                     <div className="card p-4">
-                      <ImageGenerator
-                        width={300}
-                        height={400}
-                        text={example.afterImage.text}
-                        bgColor={example.afterImage.bgColor}
-                      />
+                      <div className="relative w-full h-[400px]">
+                        <Image
+                          src={example.afterImage}
+                          alt={`${example.title} 修复后`}
+                          width={300}
+                          height={400}
+                          className="object-contain w-full h-full"
+                        />
+                      </div>
                       <p className="text-center mt-2 text-sm text-primary/60">修复后</p>
                     </div>
                   </div>

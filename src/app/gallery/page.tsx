@@ -2,33 +2,33 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ImageGenerator } from '@/components/ImageGenerator'
+import Image from 'next/image'
 
 const regions = [
   {
     name: '山东杨家埠',
     description: '以浓艳的色彩和生动的民间风格著称，体现了北方民间艺术的特色。',
-    bgColor: '#FFE4E1' // 浅红色
+    image: '/images/gallery/yangjia.jpg'
   },
   {
     name: '天津杨柳青',
     description: '色彩艳丽，构图严谨，人物形象丰满，是中国最著名的年画产地之一。',
-    bgColor: '#E6F3FF' // 浅蓝色
+    image: '/images/gallery/yangliu.jpg'
   },
   {
     name: '河南朱仙镇',
     description: '以浓郁的乡土气息和独特的艺术风格闻名，是中原地区重要的年画产地。',
-    bgColor: '#F0FFF0' // 浅绿色
+    image: '/images/gallery/henan.jpg'
   },
   {
     name: '江苏桃花坞',
     description: '以精细的工艺和典雅的风格著称，体现了江南文化的特色。',
-    bgColor: '#FFF0F5' // 浅紫色
+    image: '/images/gallery/jiangsu.jpg'
   },
   {
     name: '四川绵竹',
     description: '具有浓郁的巴蜀特色，色彩绚丽，构图大胆。',
-    bgColor: '#FFFACD' // 浅黄色
+    image: '/images/gallery/sichuan.jpg'
   }
 ]
 
@@ -36,17 +36,17 @@ const classicWorks = [
   {
     title: '绿云巨幅门神',
     period: '中国美术馆藏，清代',
-    bgColor: '#E8F5E9'
+    image: '/images/gallery/lvyun.jpg'
   },
   {
     title: '钟馗门神',
     period: '明代，纸本设色',
-    bgColor: '#FFF3E0'
+    image: '/images/gallery/zhongkuimenshen.jpg'
   },
   {
     title: '武门神：神荼郁垒',
     period: '清代，35.5×22cm，国家图书馆藏',
-    bgColor: '#FFEBEE'
+    image: '/images/gallery/wumenshen.jpg'
   }
 ]
 
@@ -74,11 +74,12 @@ export default function Gallery() {
               className="card group cursor-pointer hover:shadow-xl transition-shadow"
             >
               <div className="aspect-w-16 aspect-h-9 relative overflow-hidden">
-                <ImageGenerator
+                <Image
+                  src={region.image}
+                  alt={`${region.name}门神画`}
                   width={640}
                   height={360}
-                  text={region.name}
-                  bgColor={region.bgColor}
+                  className="object-cover object-center w-full h-full"
                 />
               </div>
               <div className="p-6">
@@ -103,11 +104,12 @@ export default function Gallery() {
                 className="card"
               >
                 <div className="aspect-w-1 aspect-h-1 relative">
-                  <ImageGenerator
+                  <Image
+                    src={work.image}
+                    alt={work.title}
                     width={400}
                     height={400}
-                    text={work.title}
-                    bgColor={work.bgColor}
+                    className="object-cover object-center w-full h-full"
                   />
                 </div>
                 <div className="p-4">
